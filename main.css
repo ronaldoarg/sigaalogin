@@ -1,0 +1,55 @@
+body {
+    padding-top: 0px;
+}
+
+.background {
+  color: hsl(0, 85%, 85%);
+  animation: wheelHueColor 100s infinite;
+  background-color: currentColor;
+}
+@supports (background-blend-mode: overlay) {
+  .background {
+    background-image: linear-gradient(45deg, white 10%, black 90%);
+    background-blend-mode: overlay;
+  }
+}
+@keyframes wheelHueColor {
+  from, to { color: hsl(36, 65%, 65%); }
+  10%      { color: hsl(72, 10%, 65%); }
+  20%      { color: hsl(108, 30%, 78%); }
+  30%      { color: hsl(144, 30%, 45%); }
+  40%      { color: hsl(180, 65%, 35%); }
+  50%      { color: hsl(216, 65%, 65%); }
+  60%      { color: hsl(252, 65%, 65%); }
+  70%      { color: hsl(288, 30%, 75%); }
+  80%      { color: hsl(224, 65%, 65%); }
+  90%      { color: hsl(360, 65%, 65%); }
+}
+
+
+/* misc */
+* { margin: 0; padding: 0; }
+.background {
+  min-height: 100vh;
+  display: flex;
+}
+
+.login-container {
+    background: rgba(255,255,255, 1);
+    border-radius: 8px;
+    width: 280px;
+    margin: auto;
+    margin-top: 100px;
+    padding: 1em;
+    animation: inherit;
+}
+
+h4 {
+    padding-bottom: 10px;
+    color: #000;
+}
+
+footer {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+}
